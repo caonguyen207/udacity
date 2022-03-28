@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "eee16f81-37cf-4203-abe0-510c78dfbec3",
+		"name": "project02",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Valid URL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/filteredimage?image_url=https://i.pinimg.com/originals/85/9f/52/859f5219ba0b8d67f399c0db5a648694.jpg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"filteredimage"
+					],
+					"query": [
+						{
+							"key": "image_url",
+							"value": "https://i.pinimg.com/originals/85/9f/52/859f5219ba0b8d67f399c0db5a648694.jpg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid URL 01",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/filteredimage?image_url=https://i.pinimg.com/originals/85/9f/52/859f5219ba0b8d67f399c0db5a648694.jpg2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"filteredimage"
+					],
+					"query": [
+						{
+							"key": "image_url",
+							"value": "https://i.pinimg.com/originals/85/9f/52/859f5219ba0b8d67f399c0db5a648694.jpg2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid URL 02",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/filteredimage?image_url=https//i.pinimg.com/originals/85/9f/52/859f5219ba0b8d67f399c0db5a648694.jpg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"filteredimage"
+					],
+					"query": [
+						{
+							"key": "image_url",
+							"value": "https//i.pinimg.com/originals/85/9f/52/859f5219ba0b8d67f399c0db5a648694.jpg"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
