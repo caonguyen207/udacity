@@ -1,4 +1,3 @@
-import { Request, Response } from 'express';
 import express from 'express';
 import bodyParser from 'body-parser';
 import fetch from 'node-fetch'
@@ -18,11 +17,11 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   
   // Root Endpoint
   // Displays a simple message to the user
-  app.get( "/", async ( req: Request, res: Response ) => {
+  app.get( "/", async ( req: express.Request, res: express.Response ) => {
     res.send("try GET /filteredimage?image_url={{}}")
   } );
   
-  app.get("/filteredimage", async (req: Request, res: Response) => {
+  app.get("/filteredimage", async (req: express.Request, res: express.Response) => {
     try {
       // Get public image url from req query
       const imageUrl: string = req.query.image_url as string;
