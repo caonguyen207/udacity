@@ -12,7 +12,7 @@ COPY ./cd0354-monolith-to-microservices-exercises/package*.json ./
 RUN npm install
 
 # Copy app source
-COPY  ./cd0354-monolith-to-microservices-exercises/* .
+COPY  ./cd0354-monolith-to-microservices-exercises/ .
 
 # Bind the port that the image will run on
 EXPOSE 8080
