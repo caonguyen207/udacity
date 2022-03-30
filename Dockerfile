@@ -6,13 +6,13 @@ WORKDIR /usr/src/app
 
 # Install app dependencies by copying
 # package.json and package-lock.json
-COPY cd0354-monolith-to-microservices-exercises/package*.json ./
+COPY ./cd0354-monolith-to-microservices-exercises/package*.json ./
 
 # Install dependencies
 RUN npm install
 
 # Copy app source
-COPY  cd0354-monolith-to-microservices-exercises/* .
+COPY  ./cd0354-monolith-to-microservices-exercises/* .
 
 # Bind the port that the image will run on
 EXPOSE 8080
